@@ -25,12 +25,8 @@ public class ScanForRansomware implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update();
+            observer.messageAlert();
         }
-    }
-
-    public void fileNameChanged() {
-        notifyObservers();
     }
 
     public void isRansomwareFile() throws InterruptedException, IOException {
@@ -43,7 +39,7 @@ public class ScanForRansomware implements Subject {
                 Runtime.getRuntime().exec("shutdown -s -t 0");
                 break;
             }
-            fileNameChanged();
+            notifyObservers();
             previousExtension = currentExtension;
 
             Thread.sleep(10000); //10초
