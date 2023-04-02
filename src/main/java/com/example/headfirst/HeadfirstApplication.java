@@ -1,5 +1,8 @@
 package com.example.headfirst;
 
+import com.example.headfirst.observer.CheckDesktop;
+import com.example.headfirst.observer.CheckLaptop;
+import com.example.headfirst.observer.ScanForRansomware;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

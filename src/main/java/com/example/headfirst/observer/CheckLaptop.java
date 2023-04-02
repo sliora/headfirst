@@ -1,4 +1,4 @@
-package com.example.headfirst;
+package com.example.headfirst.observer;
 
 public class CheckLaptop implements Observer{
     @Override

@@ -1,4 +1,4 @@
-package com.example.headfirst;
+package com.example.headfirst.observer;
 
 public interface Subject {
     void registerObserver(Observer observer);
