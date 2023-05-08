@@ -28,5 +28,4 @@ class ApiResponseTemplateTest {
         assertEquals(-1L, response.getBody().getId());
         assertEquals("Error", response.getBody().getError());
     }
-
 }

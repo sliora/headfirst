@@ -1,11 +1,14 @@
 package com.example.headfirst.template_method;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
+@Table(name = "users")
 public class User {
 
     @Id
@@ -14,36 +17,13 @@ public class User {
     private String name;
     private String email;
 
-    public User() {
-    }
-
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
-
-    // Getter와 Setter 메소드들
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
+    public User(Long id, String name, String email) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public User() {
+
     }
 }
