@@ -1,5 +1,6 @@
 package com.example.headfirst;
 
+import com.example.headfirst.iterator.*;
 import com.example.headfirst.observer.CheckDesktop;
 import com.example.headfirst.observer.CheckLaptop;
 import com.example.headfirst.observer.ScanForRansomware;
@@ -15,5 +16,13 @@ public class HeadfirstApplication {
 
     public static void main(String[] args){
         SpringApplication.run(HeadfirstApplication.class, args);
+
+        Platform netflix = (Platform) new Netflix();
+        Platform disneyPlus = (Platform) new DisneyPlus();
+        Platform amazonPrime = (Platform) new AmazonPrime();
+
+        StreamingService streamingService = new StreamingService(netflix, amazonPrime, disneyPlus);
+        streamingService.printMovie();
+
     }
 }
