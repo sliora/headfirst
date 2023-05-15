@@ -1,15 +1,12 @@
 package com.example.headfirst.iterator;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class DisneyPlus implements Platform{
-    ArrayList<Movie> movies;
+    Queue<Movie> movies;
 
     public DisneyPlus() {
-        movies = new ArrayList<>();
+        movies = new LinkedList<>();
         addMovie("도리를찾아서", "모름");
         addMovie("아이언맨", "모름");
         addMovie("가디언즈오브갤럭시", "모름");

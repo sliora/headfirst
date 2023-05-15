@@ -17,12 +17,11 @@ public class HeadfirstApplication {
     public static void main(String[] args){
         SpringApplication.run(HeadfirstApplication.class, args);
 
-        Netflix netflix = new Netflix();
-        DisneyPlus disneyPlus = new DisneyPlus();
-        AmazonPrime amazonPrime = new AmazonPrime();
+        Platform netflix = new Netflix();
+        Platform disneyPlus = new DisneyPlus();
+        Platform amazonPrime = new AmazonPrime();
 
         StreamingService streamingService = new StreamingService(netflix, amazonPrime, disneyPlus);
         streamingService.printMovie();
-
     }
 }

@@ -4,10 +4,10 @@ import java.util.*;
 import java.util.Iterator;
 
 public class AmazonPrime implements Platform{
-    List<Movie> movies;
+    Set<Movie> movies;
 
     public AmazonPrime() {
-        movies = new ArrayList<>();
+        movies = new HashSet<>();
         addMovie("아마존1", "모름");
         addMovie("아마존2", "모름");
         addMovie("아마존3", "모름");
