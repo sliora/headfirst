@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Netflix {
+public class Netflix implements Platform{
     List<Movie> movies;
 
     public Netflix() {

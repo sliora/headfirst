@@ -3,7 +3,7 @@ package com.example.headfirst.iterator;
 import java.util.*;
 import java.util.Iterator;
 
-public class AmazonPrime {
+public class AmazonPrime implements Platform{
     List<Movie> movies;
 
     public AmazonPrime() {

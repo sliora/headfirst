@@ -18,16 +18,19 @@ public class StreamingService {
         Iterator<Movie> amazonPrimeIterator = amazonPrime.createIterator();
         Iterator<Movie> disneyPlusIterator = disneyPlus.createIterator();
 
+        System.out.println("[상영목록]\n----\n넷플릭스");
         printMovie(netfilxIterator);
+        System.out.println("\n아마존 프라임");
         printMovie(amazonPrimeIterator);
+        System.out.println("\n디즈니 플러스");
         printMovie(disneyPlusIterator);
     }
 
     private void printMovie(Iterator iterator) {
         while (iterator.hasNext()) {
             Movie movie = (Movie) iterator.next();
-            System.out.println("movie.getTitle() = " + movie.getTitle());
-            System.out.println("movie.getDirector() = " + movie.getDirector());
+            System.out.print(movie.getTitle() + ", ");
+            System.out.println(movie.getDirector());
         }
     }
 }

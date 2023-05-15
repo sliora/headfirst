@@ -17,9 +17,9 @@ public class HeadfirstApplication {
     public static void main(String[] args){
         SpringApplication.run(HeadfirstApplication.class, args);
 
-        Platform netflix = (Platform) new Netflix();
-        Platform disneyPlus = (Platform) new DisneyPlus();
-        Platform amazonPrime = (Platform) new AmazonPrime();
+        Netflix netflix = new Netflix();
+        DisneyPlus disneyPlus = new DisneyPlus();
+        AmazonPrime amazonPrime = new AmazonPrime();
 
         StreamingService streamingService = new StreamingService(netflix, amazonPrime, disneyPlus);
         streamingService.printMovie();
